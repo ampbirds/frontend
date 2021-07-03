@@ -27,6 +27,7 @@ import Icon from '@material-ui/core/Icon';
 import axios from 'axios';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
+import url from './const/url';
 
 
 function Alert(props) {
@@ -114,8 +115,7 @@ const styles = theme => ({
 const getSteps = () => {
   return ["User", "Signin", "Permission"];
 };
-const username=""
-const password=""
+
 class Signup extends Component {
   state = {
     activeStep: 0,
@@ -132,7 +132,7 @@ class Signup extends Component {
     event.preventDefault()
     const data = {"username":this.state.username,"password":this.state.password}
     
-    axios.post('http://localhost:3000/login',data)
+    axios.post(url.loginUrl,data)
       .then(res => {
         if(res.data[0].msg=="success"){
           window.location.href="#/home"
