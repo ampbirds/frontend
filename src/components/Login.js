@@ -116,7 +116,7 @@ const getSteps = () => {
   return ["User", "Signin", "Permission"];
 };
 
-class Signup extends Component {
+class SignIn extends Component {
   state = {
     activeStep: 0,
     receivingAccount: "",
@@ -157,7 +157,9 @@ class Signup extends Component {
   handlepChange= event => {
     this.setState({password: event.target.value});
 }
-
+signUp = event =>{
+  window.location.href="#/signup"
+}
 
   render() {
     const { classes } = this.props;
@@ -235,7 +237,7 @@ class Signup extends Component {
                               Login
                             </Button>
                             &nbsp;&nbsp;&nbsp;
-                                <Button variant="contained" color="secondary">
+                                <Button variant="contained" color="secondary" onClick = {this.signUp}> 
                                   Sign In
                                 </Button>
                                 </div>
@@ -261,4 +263,4 @@ class Signup extends Component {
   }
 }
 
-export default withRouter(withStyles(styles)(Signup));
+export default withRouter(withStyles(styles)(SignIn));
