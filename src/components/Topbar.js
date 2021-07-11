@@ -116,6 +116,7 @@ class Topbar extends Component {
     if (this.props.currentPath === "/cards") {
       return 4;
     }
+   
   };
 
   render() {

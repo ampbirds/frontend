@@ -14,7 +14,13 @@ import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
 import Loading from "./common/Loading";
 
 import Topbar from "./Topbar";
-
+const fea1 = require("../images/fea1.jpg");
+const fea2 = require("../images/fea2.jpg");
+const fea3 = require("../images/fea3.jpg");
+const fea4 = require("../images/fea4.jpg");
+const fea5 = require("../images/fea5.jpg");
+const bike2 = require("../images/bike2.jpg");
+const bike3 = require("../images/bike3.jpg");
 const numeral = require("numeral");
 numeral.defaultFormat("0,000");
 
@@ -204,7 +210,7 @@ class Dashboard extends Component {
                       Dashboard
                     </Typography>
                     <Typography variant="body1">
-                      Adjust and play with our sliders.
+                      LekeAmp Electric Cycle Features
                     </Typography>
                   </div>
                   <div>
@@ -217,7 +223,7 @@ class Dashboard extends Component {
                   </div>
                 </div>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
                     <Typography variant="subtitle1" gutterBottom>
@@ -226,27 +232,105 @@ class Dashboard extends Component {
                     <Typography variant="body1">
                       Use slider to set the amount you need.
                     </Typography>
-                    <div className={classes.blockCenter}>
-                      <Typography color="secondary" variant="h6" gutterBottom>
-                        {numeral(amount).format()} USD
-                      </Typography>
-                    </div>
-                    <div>
-                      <Slider
-                        value={amount}
-                        min={20000}
-                        max={150000}
-                        step={15000}
-                        onChange={this.handleChangeAmount}
-                      />
-                    </div>
+                    
                     <div className={classes.rangeLabel}>
-                      <div>
-                        <Typography variant="subtitle2">15,000 USD</Typography>
-                      </div>
-                      <div>
-                        <Typography variant="subtitle2">150,000 USD</Typography>
-                      </div>
+                    <img width={1110} height={500} src={fea1} alt="" />
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <img width={1110} height={500} src={fea2} alt="" />
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <img width={1110} height={500} src={fea3} alt="" />
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <img width={1110} height={500} src={fea4} alt="" />
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <img width={1110} height={500} src={fea5} alt="" />
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <img width={1110} height={500} src={bike2} alt="" />
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <img width={1110} height={500} src={bike3} alt="" />
                     </div>
                   </div>
                 </Paper>

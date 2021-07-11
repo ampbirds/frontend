@@ -15,8 +15,15 @@ const Menu = [
   {
     label: "Cards",
     pathname: "/cards"
+  },
+  {
+    label: "Book Cycle",
+    pathname: "/shipping"
+  },
+  {
+    label: "LogOut",
+    pathname: "/"
   }
-
 ];
 
 export default Menu;

@@ -28,12 +28,27 @@ import axios from 'axios';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import url from './const/url';
-
+import Container from '@material-ui/core/Container';
+import Avatar from '@material-ui/core/Avatar';
+import Box from '@material-ui/core/Box';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Link from '@material-ui/core/Link';
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
-
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 const backgroundShape = require("../images/shape.svg");
 
 const logo = require("../images/lekeIcon.png");
@@ -134,6 +149,9 @@ class SignIn extends Component {
     
     axios.post(url.loginUrl,data)
       .then(res => {
+        localStorage.setItem("firstName",res.data[0].firstname)
+        localStorage.setItem("lastName",res.data[0].lastname)
+        localStorage.setItem("email",res.data[0].username)
         if(res.data[0].msg=="success"){
           window.location.href="#/home"
         }else{
@@ -168,97 +186,180 @@ signUp = event =>{
    
 
     return (
-      <React.Fragment>
-        <CssBaseline />
-        <div className={classes.root}>
+      // <React.Fragment>
+      //   <CssBaseline />
+      //   <div className={classes.root}>
           
-          <Grid container justify="center">
-            <Grid
-              spacing={10}
-              alignItems="center"
-              justify="center"
-              container
-              className={classes.grid}
-            >
-              <Grid item xs={12}>
-                <div className={classes.logo}>
-                  <img width={100} height={100} src={logo} alt="" />
-                </div>
-                <div className={classes.stepContainer}>
+      //     <Grid container justify="center">
+      //       <Grid
+      //         spacing={10}
+      //         alignItems="center"
+      //         justify="center"
+      //         container
+      //         className={classes.grid}
+      //       >
+      //         <Grid item xs={12}>
+      //           <div className={classes.logo}>
+      //             <img width={100} height={100} src={logo} alt="" />
+      //           </div>
+      //           <div className={classes.stepContainer}>
                   
-                  {activeStep === 0 && (
-                    <div className={classes.smallContainer}>
-                      <Paper className={classes.paper}>
-                        <div>
+      //             {activeStep === 0 && (
+      //               <div className={classes.smallContainer}>
+      //                 <Paper className={classes.paper}>
+      //                   <div>
                          
-                          <div>
-                            <Typography
-                              style={{
-                                textTransform: "uppercase",
-                                marginBottom: 20
-                              }}
-                              color="secondary"
-                              gutterBottom
-                            >
-                              Login
-                            </Typography>
-                            <FormControl
-                              variant="outlined"
-                              className={classes.formControl}
-                            >
-                              <TextField
-                                id="email"
-                                label="Email"
-                                type="text"
-                                autoComplete="email"
-                                variant="filled"
-                                value={this.state.username}
-                                onChange={this.handleuChange}
-                              />
-                              <br></br>
-                                  <TextField
-                                  id="password"
-                                  label="Password"
-                                  type="password"
-                                  autoComplete="current-password"
-                                  variant="filled"
-                                  value={this.state.password}
-                                onChange={this.handlepChange}
-                                />
-                                <br></br>
-                                <div>
-                                <Button
-                              variant="contained"
-                              color="primary"
-                              onClick={this.handleLogin}
-                              className={classes.button}
-                              endIcon={<Icon>send</Icon>}
-                            >
-                              Login
-                            </Button>
-                            &nbsp;&nbsp;&nbsp;
-                                <Button variant="contained" color="secondary" onClick = {this.signUp}> 
-                                  Sign In
-                                </Button>
-                                </div>
-                            </FormControl>
-                          </div>
-                        </div>
-                      </Paper>
-                    </div>
-                  )}
-                  <Snackbar open={this.state.open} autoHideDuration={6000} onClose={this.handleClose}>
-                    <Alert onClose={this.handleClose} severity="error">
-                      Username or Password is incorrect!
-                    </Alert>
-                  </Snackbar>
+      //                     <div>
+      //                       <Typography
+      //                         style={{
+      //                           textTransform: "uppercase",
+      //                           marginBottom: 20
+      //                         }}
+      //                         color="secondary"
+      //                         gutterBottom
+      //                       >
+      //                         Login
+      //                       </Typography>
+      //                       <FormControl
+      //                         variant="outlined"
+      //                         className={classes.formControl}
+      //                       >
+      //                         <TextField
+      //                           id="email"
+      //                           label="Email"
+      //                           type="text"
+      //                           autoComplete="email"
+      //                           variant="outlined"
+      //                           value={this.state.username}
+      //                           onChange={this.handleuChange}
+      //                         />
+      //                         <br></br>
+      //                             <TextField
+      //                             id="password"
+      //                             label="Password"
+      //                             type="password"
+      //                             autoComplete="current-password"
+      //                             variant="outlined"
+      //                             value={this.state.password}
+      //                           onChange={this.handlepChange}
+      //                           />
+      //                           <br></br>
+      //                           <div>
+      //                           <Button
+      //                         variant="contained"
+      //                         color="primary"
+      //                         onClick={this.handleLogin}
+      //                         className={classes.button}
+      //                         endIcon={<Icon>send</Icon>}
+      //                       >
+      //                         Login
+      //                       </Button>
+      //                       &nbsp;&nbsp;&nbsp;
+      //                           <Button variant="contained" color="secondary" onClick = {this.signUp}> 
+      //                             Sign In
+      //                           </Button>
+      //                           </div>
+      //                       </FormControl>
+      //                     </div>
+      //                   </div>
+      //                 </Paper>
+      //               </div>
+      //             )}
+      //             <Snackbar open={this.state.open} autoHideDuration={6000} onClose={this.handleClose}>
+      //               <Alert onClose={this.handleClose} severity="error">
+      //                 Username or Password is incorrect!
+      //               </Alert>
+      //             </Snackbar>
                   
-                </div>
-              </Grid>
+      //           </div>
+      //         </Grid>
+      //       </Grid>
+      //     </Grid>
+      //   </div>
+      // </React.Fragment>
+      <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <div className={classes.paper}>
+        <Avatar className={classes.avatar}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Log In
+        </Typography>
+        <br></br><br></br>
+        <form className={classes.form} noValidate>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={12}>
+              <TextField
+                
+                required
+                fullWidth
+               
+                autoFocus
+
+                id="email"
+                label="Email"
+                type="text"
+                autoComplete="email"
+                variant="outlined"
+                value={this.state.username}
+                onChange={this.handleuChange}
+              />
             </Grid>
+            <Grid item xs={12} sm={12}>
+              <TextField
+                
+                required
+                fullWidth
+                
+                autoComplete="lname"
+
+                id="password"
+                label="Password"
+                type="password"
+                autoComplete="current-password"
+                variant="outlined"
+                value={this.state.password}
+                onChange={this.handlepChange}
+              />
+            </Grid>
+           
+           
           </Grid>
-        </div>
-      </React.Fragment>
+          <br></br><br></br>
+          <Button
+            type="button"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={this.handleLogin}
+          >
+            Log In
+          </Button>
+          <br></br><br></br>
+          <Button
+            type="button"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick = {this.signUp}
+          >
+            Sign Up
+          </Button>
+          
+        </form>
+      </div>
+      <Box mt={5}>
+        <Copyright />
+      </Box>
+      <Snackbar open={this.state.open} autoHideDuration={6000} onClose={this.handleClose}>
+                    <Alert onClose={this.handleClose} severity="error">
+                       Username or Password is incorrect!
+                     </Alert>
+                   </Snackbar>
+    </Container>
     );
   }
 }

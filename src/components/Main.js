@@ -12,7 +12,9 @@ import SwipeDialog from "./dialogs/SwipeDialog";
 import Topbar from "./Topbar";
 
 const backgroundShape = require("../images/shape.svg");
-
+const bike1 = require("../images/bike1.JPG");
+const bike2 = require("../images/bike2.JPG");
+const bike3 = require("../images/bike3.JPG");
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -137,10 +139,11 @@ class Main extends Component {
                       color="secondary"
                       gutterBottom
                     >
-                      First title
+                      Our Vision
                     </Typography>
                     <Typography variant="body2" gutterBottom>
-                      A first title style <br /> with two lines
+                    We at Lekeamp Mobility Pvt. Ltd., have a vision to make every commute of the world smarter and Eco-friendly!
+
                     </Typography>
                   </div>
                   <div style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -162,10 +165,10 @@ class Main extends Component {
                       color="secondary"
                       gutterBottom
                     >
-                      Another box
+                      Our Team
                     </Typography>
                     <Typography variant="body1" gutterBottom>
-                      A default box
+                    The best part is, Lekeamp Mobility have dedicated, experienced and optimistic core team who are completely aware about the vision of this venture.
                     </Typography>
                   </div>
                   <div style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -187,11 +190,10 @@ class Main extends Component {
                       color="secondary"
                       gutterBottom
                     >
-                      A box with a carousel
+                      Upcomming Product
                     </Typography>
                     <Typography variant="body1" gutterBottom>
-                      If you click in Getting Started, you will see a nice
-                      carousel
+                      Blitz CS03
                     </Typography>
                   </div>
                   <div className={classes.alignRight}>
@@ -217,13 +219,57 @@ class Main extends Component {
                 <Grid item xs={12}>
                   <Paper className={classes.paper}>
                     <div>
-                      <div className={classes.box}>
+                      <div >
                         <Typography color="secondary" gutterBottom>
-                          Full box
+                          Electric Cycle
                         </Typography>
-                        <Typography variant="body1" gutterBottom>
-                          This is an example of a full-width box
+                        <img width={1110} height={500} src={bike1} alt="" />
+                      </div>
+                      <div className={classes.alignRight}>
+                        <Button
+                          color="primary"
+                          variant="contained"
+                          className={classes.actionButtom}
+                        >
+                          Learn more
+                        </Button>
+                      </div>
+                    </div>
+                  </Paper>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12}>
+                <Grid item xs={12}>
+                  <Paper className={classes.paper}>
+                    <div>
+                      <div >
+                        <Typography color="secondary" gutterBottom>
+                          Electric Cycle
                         </Typography>
+                        <img width={1110} height={500} src={bike2} alt="" />
+                      </div>
+                      <div className={classes.alignRight}>
+                        <Button
+                          color="primary"
+                          variant="contained"
+                          className={classes.actionButtom}
+                        >
+                          Learn more
+                        </Button>
+                      </div>
+                    </div>
+                  </Paper>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12}>
+                <Grid item xs={12}>
+                  <Paper className={classes.paper}>
+                    <div>
+                      <div >
+                        <Typography color="secondary" gutterBottom>
+                          Electric Cycle
+                        </Typography>
+                        <img width={1110} height={500} src={bike3} alt="" />
                       </div>
                       <div className={classes.alignRight}>
                         <Button

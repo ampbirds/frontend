@@ -7,6 +7,7 @@ import Main from './components/Main'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import ScrollToTop from './components/ScrollTop'
+import AddressForm from './components/AddressForm'
 
 export default props => (
     <HashRouter>
@@ -18,6 +19,7 @@ export default props => (
           <Route exact path='/signup' component={ Signup } />
           <Route exact path='/wizard' component={ Wizard } />
           <Route exact path='/cards' component={ Cards } />
+          <Route exact path='/shipping' component={ AddressForm } />
         </Switch>
       </ScrollToTop>
     </HashRouter>
