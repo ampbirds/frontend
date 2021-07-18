@@ -21,6 +21,8 @@ const fea4 = require("../images/fea4.jpg");
 const fea5 = require("../images/fea5.jpg");
 const bike2 = require("../images/bike2.jpg");
 const bike3 = require("../images/bike3.jpg");
+const video1 = require("../videos/video1.mp4");
+const video2 = require("../videos/video2.mp4");
 const numeral = require("numeral");
 numeral.defaultFormat("0,000");
 
@@ -331,6 +333,42 @@ class Dashboard extends Component {
                     
                     <div className={classes.rangeLabel}>
                     <img width={1110} height={500} src={bike3} alt="" />
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <video width={1110} height={500} controls  >
+                      <source src={video1} type="video/mp4"/>
+                    </video>
+                    </div>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} >
+                <Paper className={classes.paper}>
+                  <div>
+                    <Typography variant="subtitle1" gutterBottom>
+                      How much you want to transfer
+                    </Typography>
+                    <Typography variant="body1">
+                      Use slider to set the amount you need.
+                    </Typography>
+                    
+                    <div className={classes.rangeLabel}>
+                    <video width={1110} height={500} controls  >
+                      <source src={video2} type="video/mp4"/>
+                    </video>
                     </div>
                   </div>
                 </Paper>
