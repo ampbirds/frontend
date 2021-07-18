@@ -12,9 +12,9 @@ import SwipeDialog from "./dialogs/SwipeDialog";
 import Topbar from "./Topbar";
 
 const backgroundShape = require("../images/shape.svg");
-const bike1 = require("../images/bike1.JPG");
-const bike2 = require("../images/bike2.JPG");
-const bike3 = require("../images/bike3.JPG");
+const bike1 = require("../images/bike1.jpg");
+const bike2 = require("../images/bike2.jpg");
+const bike3 = require("../images/bike3.jpg");
 const styles = theme => ({
   root: {
     flexGrow: 1,
