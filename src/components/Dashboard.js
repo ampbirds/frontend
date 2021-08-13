@@ -57,7 +57,8 @@ const styles = theme => ({
   rangeLabel: {
     display: "flex",
     justifyContent: "space-between",
-    paddingTop: theme.spacing(2)
+    paddingTop: theme.spacing(2),
+    overflow:"scroll"
   },
   topBar: {
     display: "flex",
@@ -178,6 +179,9 @@ class Dashboard extends Component {
     this.setState({ start: value, loading: false });
     this.updateValues();
   };
+  bookNow = (event, value) => {
+    window.location.href="https://docs.google.com/forms/d/e/1FAIpQLSeaU1hjw01SbL81ASwHepiGI1XnKKCoK61ZgA5jj2lVN0mxrQ/viewform?vc=0&c=0&w=1&flr=0"
+  };
 
   render() {
     const { classes } = this.props;
@@ -219,8 +223,9 @@ class Dashboard extends Component {
                     <Button
                       variant="outlined"
                       className={classes.outlinedButtom}
+                      onClick={this.bookNow}
                     >
-                      Get help
+                      Book Now
                     </Button>
                   </div>
                 </div>
@@ -348,9 +353,10 @@ class Dashboard extends Component {
                     </Typography>
                     
                     <div className={classes.rangeLabel}>
-                    <video width={1110} height={500} controls  >
+                    {/* <video width={1110} height={500} controls  >
                       <source src={video1} type="video/mp4"/>
-                    </video>
+                    </video> */}
+                    <iframe width="1110" height="500" src="https://www.youtube.com/embed/IX6KxPvF0Vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   </div>
                 </Paper>
@@ -366,9 +372,10 @@ class Dashboard extends Component {
                     </Typography>
                     
                     <div className={classes.rangeLabel}>
-                    <video width={1110} height={500} controls  >
+                    {/* <video width={1110} height={500} controls  >
                       <source src={video2} type="video/mp4"/>
-                    </video>
+                    </video> */}
+                    <iframe width="1110" height="500" src="https://www.youtube.com/embed/KFG6ieHDYk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   </div>
                 </Paper>
