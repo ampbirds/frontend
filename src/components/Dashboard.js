@@ -40,17 +40,17 @@ const styles = theme => ({
   },
   grid: {
     width: 1200,
-    margin: `0 ${theme.spacing(2)}px`,
+    margin: `0 ${theme.spacing(1)}px`,
     [theme.breakpoints.down("sm")]: {
-      width: "calc(100% - 20px)"
+      width: "calc(100% - 0px)"
     }
   },
   loadingState: {
     opacity: 0.05
   },
   paper: {
-    padding: theme.spacing(3),
-    margin: theme.spacing(2),
+    padding: theme.spacing(1),
+    margin: theme.spacing(1),
     textAlign: "left",
     color: theme.palette.text.secondary
   },
@@ -131,6 +131,8 @@ class Dashboard extends Component {
     totalInterest: 0,
     monthlyPayment: 0,
     totalPayment: 0,
+    wd:1110,
+    ht:500,
     data: []
   };
 
@@ -163,6 +165,15 @@ class Dashboard extends Component {
 
   componentDidMount() {
     this.updateValues();
+    
+    if(( window.innerWidth <= 800 )){
+      this.setState({wd:"100%"})
+      this.setState({ht:"auto"})
+    }
+    else{
+      this.setState({wd:1110})
+      this.setState({ht:500})
+    }
   }
 
   handleChangeAmount = (event, value) => {
@@ -192,6 +203,8 @@ class Dashboard extends Component {
       monthlyPayment,
       monthlyInterest,
       data,
+      wd,
+      ht,
       loading
     } = this.state;
     const currentPath = this.props.location.pathname;
@@ -233,15 +246,15 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    <img width={1110} height={500} src={fea1} alt="" />
+                    <img width={wd} height={ht} src={fea1} alt="" />
                     </div>
                   </div>
                 </Paper>
@@ -249,15 +262,15 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    <img width={1110} height={500} src={fea2} alt="" />
+                    <img width={wd} height={ht} src={fea2} alt="" />
                     </div>
                   </div>
                 </Paper>
@@ -265,15 +278,15 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    <img width={1110} height={500} src={fea3} alt="" />
+                    <img width={wd} height={ht} src={fea3} alt="" />
                     </div>
                   </div>
                 </Paper>
@@ -281,15 +294,15 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    <img width={1110} height={500} src={fea4} alt="" />
+                    <img width={wd} height={ht} src={fea4} alt="" />
                     </div>
                   </div>
                 </Paper>
@@ -297,15 +310,15 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    <img width={1110} height={500} src={fea5} alt="" />
+                    <img width={wd} height={ht} src={fea5} alt="" />
                     </div>
                   </div>
                 </Paper>
@@ -313,15 +326,15 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    <img width={1110} height={500} src={bike2} alt="" />
+                    <img width={wd} height={ht} src={bike2} alt="" />
                     </div>
                   </div>
                 </Paper>
@@ -329,15 +342,15 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    <img width={1110} height={500} src={bike3} alt="" />
+                    <img width={wd} height={ht} src={bike3} alt="" />
                     </div>
                   </div>
                 </Paper>
@@ -345,42 +358,42 @@ class Dashboard extends Component {
               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    {/* <video width={1110} height={500} controls  >
+                    {/* <video width={wd} height={ht} controls  >
                       <source src={video1} type="video/mp4"/>
                     </video> */}
-                    <iframe width="1110" height="500" src="https://www.youtube.com/embed/IX6KxPvF0Vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width={wd} height={ht} src="https://www.youtube.com/embed/IX6KxPvF0Vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} >
+               <Grid item xs={12} >
                 <Paper className={classes.paper}>
                   <div>
-                    <Typography variant="subtitle1" gutterBottom>
+                    {/* <Typography variant="subtitle1" gutterBottom>
                       How much you want to transfer
                     </Typography>
                     <Typography variant="body1">
                       Use slider to set the amount you need.
-                    </Typography>
+                    </Typography> */}
                     
                     <div className={classes.rangeLabel}>
-                    {/* <video width={1110} height={500} controls  >
+                    {/* <video width={wd} height={ht} controls  >
                       <source src={video2} type="video/mp4"/>
                     </video> */}
-                    <iframe width="1110" height="500" src="https://www.youtube.com/embed/KFG6ieHDYk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width={wd} height={ht} src="https://www.youtube.com/embed/KFG6ieHDYk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} md={4}>
+              {/* <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div>
                     <Typography variant="subtitle1" gutterBottom>
@@ -411,8 +424,9 @@ class Dashboard extends Component {
                     </div>
                   </div>
                 </Paper>
-              </Grid>
-              <Grid item xs={12} md={4}>
+              </Grid> */}
+
+              {/* <Grid item xs={12} md={4}>
                 <Paper className={classes.paper}>
                   <div>
                     <Typography variant="subtitle1" gutterBottom>
@@ -445,8 +459,9 @@ class Dashboard extends Component {
                     </div>
                   </div>
                 </Paper>
-              </Grid>
-              <Grid container spacing={4} justify="center">
+              </Grid> */}
+
+              {/* <Grid container spacing={4} justify="center">
                 <Grid item xs={12} md={8}>
                   <Paper
                     className={classes.paper}
@@ -549,8 +564,8 @@ class Dashboard extends Component {
                       </div>
                     </div>
                   </Paper>
-                </Grid>
-              </Grid>
+                </Grid> 
+              </Grid> */}
             </Grid>
           </Grid>
         </div>

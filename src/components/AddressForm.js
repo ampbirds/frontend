@@ -69,6 +69,7 @@ class AddressForm extends Component {
 render(){
     const { classes } = this.props;
     const { firstName, lastName,email , addressline1,addressline2,city,zipcode,country,st } = this.state;
+    const currentPath = "shipping";
   return (
     <React.Fragment>
         <CssBaseline />

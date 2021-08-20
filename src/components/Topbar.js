@@ -16,7 +16,7 @@ import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { Link as MaterialLink } from "@material-ui/core";
 import Menu from "./Menu";
 
-const logo = require("../images/logo.svg");
+const logo = require("../images/lekeIcon.png");
 
 const styles = theme => ({
   appBar: {
@@ -104,7 +104,7 @@ class Topbar extends Component {
     if (this.props.currentPath === "/home") {
       return 0;
     }
-    if (this.props.currentPath === "/dashboard") {
+    if (this.props.currentPath === "/") {
       return 1;
     }
     if (this.props.currentPath === "/signup") {
@@ -138,7 +138,7 @@ class Topbar extends Component {
               {!this.props.noTabs && (
                 <React.Fragment>
                   <div className={classes.productLogo}>
-                    <Typography>A elctric cycle</Typography>
+                    <Typography>An elctric cycle</Typography>
                   </div>
                   <div className={classes.iconContainer}>
                     <IconButton

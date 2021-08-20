@@ -5,7 +5,7 @@ const Menu = [
   },
   {
     label: "Dashboard",
-    pathname: "/dashboard"
+    pathname: "/"
   },
   
   {
@@ -15,6 +15,10 @@ const Menu = [
   {
     label: "Book Cycle",
     pathname: "/shipping"
+  },
+  {
+    label: "About Us",
+    pathname: "/aboutus"
   },
   {
     label: "LogOut",

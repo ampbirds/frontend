@@ -95,10 +95,21 @@ const styles = theme => ({
 class Main extends Component {
   state = {
     learnMoredialog: false,
-    getStartedDialog: false
+    getStartedDialog: false,
+    wd:1110,
+    ht:500
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    if(( window.innerWidth <= 800 )){
+      this.setState({wd:"100%"})
+      this.setState({ht:"auto"})
+    }
+    else{
+      this.setState({wd:1110})
+      this.setState({ht:500})
+    }
+  }
 
   openDialog = event => {
     this.setState({ learnMoredialog: true });
@@ -118,6 +129,10 @@ class Main extends Component {
 
   render() {
     const { classes } = this.props;
+    const {
+      wd,
+      ht
+    }= this.state;
     return (
       <React.Fragment>
         <CssBaseline />
@@ -223,7 +238,7 @@ class Main extends Component {
                         <Typography color="secondary" gutterBottom>
                           Electric Cycle
                         </Typography>
-                        <img width={1110} height={500} src={bike1} alt="" />
+                        <img width={wd} height={ht} src={bike1} alt="" />
                       </div>
                       <div className={classes.alignRight}>
                         <Button
@@ -246,7 +261,7 @@ class Main extends Component {
                         <Typography color="secondary" gutterBottom>
                           Electric Cycle
                         </Typography>
-                        <img width={1110} height={500} src={bike2} alt="" />
+                        <img width={wd} height={ht} src={bike2} alt="" />
                       </div>
                       <div className={classes.alignRight}>
                         <Button
@@ -269,7 +284,7 @@ class Main extends Component {
                         <Typography color="secondary" gutterBottom>
                           Electric Cycle
                         </Typography>
-                        <img width={1110} height={500} src={bike3} alt="" />
+                        <img width={wd} height={ht} src={bike3} alt="" />
                       </div>
                       <div className={classes.alignRight}>
                         <Button
