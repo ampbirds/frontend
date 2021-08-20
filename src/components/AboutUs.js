@@ -155,7 +155,7 @@ class AboutUs extends Component {
                       color="secondary"
                       gutterBottom
                     >
-                      Our Vision
+                      About Us
                     </Typography>
                     <Typography variant="body2" gutterBottom>
                     Lekeamp Mobility is founded by Nayan Mavarkar and Hrishikesh Shiralkar in jan, 2019 in Maharashtra.This company was built with the vision to make every commute of the world smarter and eco-friendly. We are now having few more optimistic cofounders and have already deployed our first product BLITZ CSO3 that have several Unique selling points with appealing look and amazing features. Yet this is just a first generation version. Lekeamp is on the verge to bring more smart solutions in green mobility, for that stay tuned!
