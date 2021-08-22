@@ -23,7 +23,8 @@ const styles = theme => ({
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: "cover",
     backgroundPosition: "0 400px",
-    paddingBottom: 200
+    paddingBottom: 200,
+    paddingTop:"20px"
   },
   grid: {
     width: 1200,
@@ -66,7 +67,7 @@ const styles = theme => ({
   },
   box: {
     marginBottom: 40,
-    height: 65
+    
   },
   inlining: {
     display: "inline-block",

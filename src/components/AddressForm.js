@@ -31,6 +31,9 @@ const styles = theme => ({
     submit: {
       margin: theme.spacing(3, 0, 2),
     },
+    paddTop:{
+      paddingTop:"70px"
+    }
   });
 
 class AddressForm extends Component {
@@ -74,7 +77,7 @@ render(){
     <React.Fragment>
         <CssBaseline />
         <Topbar />
-        <Paper>
+        <Paper className={classes.paddTop}>
             
       <Typography variant="h6" gutterBottom>
         Shipping address

@@ -20,10 +20,11 @@ const logo = require("../images/lekeIcon.png");
 
 const styles = theme => ({
   appBar: {
-    position: "relative",
+    // position: "relative",
     boxShadow: "none",
     borderBottom: `1px solid ${theme.palette.grey["100"]}`,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    
   },
   inline: {
     display: "inline"
@@ -123,7 +124,7 @@ class Topbar extends Component {
     const { classes } = this.props;
 
     return (
-      <AppBar position="absolute" color="default" className={classes.appBar}>
+      <AppBar position="fixed" color="default" className={classes.appBar}>
         <Toolbar>
           <Grid container spacing={10} alignItems="baseline">
             <Grid item xs={12} className={classes.flex}>
@@ -138,7 +139,7 @@ class Topbar extends Component {
               {!this.props.noTabs && (
                 <React.Fragment>
                   <div className={classes.productLogo}>
-                    <Typography>An elctric cycle</Typography>
+                    <Typography>EBIKE</Typography>
                   </div>
                   <div className={classes.iconContainer}>
                     <IconButton

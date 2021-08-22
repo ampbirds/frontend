@@ -8,10 +8,10 @@ const Menu = [
     pathname: "/"
   },
   
-  {
-    label: "Wizard",
-    pathname: "/wizard"
-  },
+  // {
+  //   label: "Wizard",
+  //   pathname: "/wizard"
+  // },
   {
     label: "Book Cycle",
     pathname: "/shipping"

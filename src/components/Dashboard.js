@@ -36,7 +36,8 @@ const styles = theme => ({
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: "cover",
     backgroundPosition: "0 400px",
-    paddingBottom: 200
+    paddingBottom: 200,
+    paddingTop:"20px"
   },
   grid: {
     width: 1200,
@@ -226,11 +227,11 @@ class Dashboard extends Component {
                 <div className={classes.topBar}>
                   <div className={classes.block}>
                     <Typography variant="h6" gutterBottom>
-                      Dashboard
+                      Time has come to book your BLITZ CSO3
                     </Typography>
-                    <Typography variant="body1">
+                    {/* <Typography variant="body1">
                       LekeAmp Electric Cycle Features
-                    </Typography>
+                    </Typography> */}
                   </div>
                   <div>
                     <Button
@@ -256,6 +257,9 @@ class Dashboard extends Component {
                     <div className={classes.rangeLabel}>
                     <img width={wd} height={ht} src={fea1} alt="" />
                     </div>
+                    <Typography variant="body1">
+                    Indicates battery percentage, speed, distance, PAS levels etc.
+                    </Typography>
                   </div>
                 </Paper>
               </Grid>
@@ -272,6 +276,9 @@ class Dashboard extends Component {
                     <div className={classes.rangeLabel}>
                     <img width={wd} height={ht} src={fea2} alt="" />
                     </div>
+                    <Typography variant="body1">
+                    Let's stop talking about the future, and start living it! 
+                    </Typography>
                   </div>
                 </Paper>
               </Grid>
@@ -288,6 +295,9 @@ class Dashboard extends Component {
                     <div className={classes.rangeLabel}>
                     <img width={wd} height={ht} src={fea3} alt="" />
                     </div>
+                    <Typography variant="body1">
+                    Waterproof buttons for headlamp and horn
+                    </Typography>
                   </div>
                 </Paper>
               </Grid>
@@ -304,6 +314,9 @@ class Dashboard extends Component {
                     <div className={classes.rangeLabel}>
                     <img width={wd} height={ht} src={fea4} alt="" />
                     </div>
+                    <Typography variant="body1">
+                    Electric lock that locks the ebike mechanically as well as electrically!
+                    </Typography>
                   </div>
                 </Paper>
               </Grid>
@@ -320,6 +333,9 @@ class Dashboard extends Component {
                     <div className={classes.rangeLabel}>
                     <img width={wd} height={ht} src={fea5} alt="" />
                     </div>
+                    <Typography variant="body1">
+                    White head led lamp which is water resistant! 
+                    </Typography>
                   </div>
                 </Paper>
               </Grid>
@@ -336,6 +352,9 @@ class Dashboard extends Component {
                     <div className={classes.rangeLabel}>
                     <img width={wd} height={ht} src={bike2} alt="" />
                     </div>
+                    <Typography variant="body1">
+                    Battery with the smart lock inside! 
+                    </Typography>
                   </div>
                 </Paper>
               </Grid>
@@ -352,6 +371,9 @@ class Dashboard extends Component {
                     <div className={classes.rangeLabel}>
                     <img width={wd} height={ht} src={bike3} alt="" />
                     </div>
+                    <Typography variant="body1">
+                    Swipe to access the trunk/ to remove the battery to unlock the ebike.
+                    </Typography>
                   </div>
                 </Paper>
               </Grid>
@@ -369,7 +391,7 @@ class Dashboard extends Component {
                     {/* <video width={wd} height={ht} controls  >
                       <source src={video1} type="video/mp4"/>
                     </video> */}
-                    <iframe width={wd} height={ht} src="https://www.youtube.com/embed/IX6KxPvF0Vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width={wd} height={ht} src="https://www.youtube.com/embed/IX6KxPvF0Vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
                     </div>
                   </div>
                 </Paper>
@@ -388,7 +410,7 @@ class Dashboard extends Component {
                     {/* <video width={wd} height={ht} controls  >
                       <source src={video2} type="video/mp4"/>
                     </video> */}
-                    <iframe width={wd} height={ht} src="https://www.youtube.com/embed/KFG6ieHDYk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width={wd} height={ht} src="https://www.youtube.com/embed/KFG6ieHDYk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;fullscreen" allowfullscreen></iframe>
                     </div>
                   </div>
                 </Paper>
