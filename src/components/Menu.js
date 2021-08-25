@@ -19,11 +19,12 @@ const Menu = [
   {
     label: "About Us",
     pathname: "/aboutus"
-  },
-  {
-    label: "LogOut",
-    pathname: "/"
   }
+  // ,
+  // {
+  //   label: "LogOut",
+  //   pathname: "/"
+  // }
 ];
 
 export default Menu;

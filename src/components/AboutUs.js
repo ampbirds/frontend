@@ -173,6 +173,25 @@ class AboutUs extends Component {
                     </Button> */}
                   </div>
                 </Paper>
+                <br></br>
+                <Paper className={classes.paper}>
+                <div className={classes.box}>
+                  <Typography variant="body2" gutterBottom>
+                  Proudly developed in India, Vasai, Maharashtra! 
+                  
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                  
+                  For free test rides contact <a href="tel:+91 8600839237">+91 8600839237</a>, <a href="tel:+91 99301 17422">+91 99301 17422</a>.
+                  
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                  
+                  
+                  Email: <a href="mailto:lekeampmobility@gmail.com">lekeampmobility@gmail.com</a>
+                  </Typography>
+                  </div>
+                </Paper>
               </Grid>
               
               
